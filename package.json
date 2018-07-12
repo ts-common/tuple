@@ -1,0 +1,27 @@
+{
+  "name": "tuple",
+  "version": "0.0.0",
+  "description": "Tuples",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ts-common/tuple.git"
+  },
+  "author": "Sergey Shandar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ts-common/tuple/issues"
+  },
+  "files": [
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/ts-common/tuple#readme",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  }
+}
