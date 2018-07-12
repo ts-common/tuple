@@ -1,12 +1,12 @@
 {
-  "name": "tuple",
+  "name": "@ts-common/tuple",
   "version": "0.0.0",
   "description": "Tuples",
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepack": "tsc"
+    "prepack": "npm install && tsc"
   },
   "repository": {
     "type": "git",
