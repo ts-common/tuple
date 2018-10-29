@@ -1,11 +1,11 @@
 {
   "name": "@ts-common/tuple",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Tuples",
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsc",
     "prepack": "npm install && tsc"
   },
   "repository": {
@@ -22,6 +22,6 @@
   ],
   "homepage": "https://github.com/ts-common/tuple#readme",
   "devDependencies": {
-    "typescript": "^2.9.2"
+    "typescript": "^3.1.3"
   }
 }
