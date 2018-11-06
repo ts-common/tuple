@@ -7,7 +7,7 @@ export interface Tuple1<T> extends Iterable<T> {
     readonly [1]?: never
 }
 
-export function tuple1<T>(v: T): Tuple1<T> { return [v] }
+export const tuple1 = <T>(v: T): Tuple1<T> => [v]
 
 export interface Tuple2<T0, T1> extends Iterable<T0 | T1> {
     readonly [0]: T0
@@ -15,4 +15,4 @@ export interface Tuple2<T0, T1> extends Iterable<T0 | T1> {
     readonly [2]?: never
 }
 
-export function tuple2<T0, T1>(v0: T0, v1: T1): Tuple2<T0, T1> { return [v0, v1] }
+export const tuple2 = <T0, T1>(v0: T0, v1: T1): Tuple2<T0, T1> => [v0, v1]
