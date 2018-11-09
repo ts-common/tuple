@@ -7,13 +7,13 @@ trigger:
 strategy:
   matrix:
     Node6:
-      node.version: `6.x`
+      node.version: 6.x
     Node8:
-      node.version: `8.x`
+      node.version: 8.x
     Node10:
-      node.version: `10.x`
+      node.version: 10.x
     Node11:
-      node.version: `11.x`
+      node.version: 11.x
 
 steps:
 
