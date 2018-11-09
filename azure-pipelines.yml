@@ -4,6 +4,17 @@ pool:
 trigger:
 - master
 
+strategy:
+  matrix:
+    Node6:
+      node.version: `6.x`
+    Node8:
+      node.version: `8.x`
+    Node10:
+      node.version: `10.x`
+    Node11:
+      node.version: `11.x`
+
 steps:
 
 - script: npm install
