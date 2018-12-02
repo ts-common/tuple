@@ -61,3 +61,5 @@ typings/
 .next
 *.js
 *.d.ts
+
+package-lock.json
