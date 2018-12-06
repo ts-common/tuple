@@ -1,6 +1,8 @@
-export type Tuple0 = ReadonlyArray<never>
+export interface Tuple0 extends Iterable<never> {
+    readonly length: 0
+}
 
-export const tuple0: Tuple0 = []
+export const tuple0: Tuple0 = [] as Tuple0
 
 export interface Tuple1<T> extends Iterable<T> {
     readonly length: 1
@@ -87,3 +89,13 @@ export const tuple7 = <T0, T1, T2, T3, T4, T5, T6>(
     v0: T0, v1: T1, v2: T2, v3: T3, v4: T4, v5: T5, v6: T6
 ): Tuple7<T0, T1, T2, T3, T4, T5, T6> =>
     [v0, v1, v2, v3, v4, v5, v6]
+
+export type Tuples<T> =
+    Tuple0 |
+    Tuple1<T> |
+    Tuple2<T, T> |
+    Tuple3<T, T, T> |
+    Tuple4<T, T, T, T> |
+    Tuple5<T, T, T, T, T> |
+    Tuple6<T, T, T, T, T, T> |
+    Tuple7<T, T, T, T, T, T, T>
