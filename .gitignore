@@ -63,3 +63,4 @@ typings/
 *.d.ts
 
 package-lock.json
+/dist/
