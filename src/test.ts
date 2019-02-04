@@ -1,25 +1,17 @@
-import "mocha"
-import * as tuple from "./index"
-import * as assert from "assert"
+type ImmutableTuple2 = {
+    readonly [0]: number
+    readonly [1]: string
+} & Iterable<number|string>
 
-const fm = <T>(_: Iterable<T>, _a: (v: T) => void) => {}
+/*
+const f = ([a, b]: ImmutableTuple2) => {
+    const _a: number = a // a should be a `number` but it's `number`|`string` in TS 3.3
+    const _b: string = b // b should be a `string` but it's `number`|`string` in TS 3.3
+}
+*/
 
-describe("main test", () => {
-    it("tuple2", () => {
-        const x = tuple.tuple2(2, "a")
-        const [a, b] = x
-        const _ma: number = a
-        assert.strictEqual(_ma, 2)
-        const _mb: string = b
-        assert.strictEqual(_mb, "a")
-    })
-    it("array of tuple2", () => {
-        const x = [tuple.tuple2(2, "a")]
-        fm(x, ([a, b]) => {
-            const _a: number = a
-            assert.strictEqual(_a, 2)
-            const _b: string = b
-            assert.strictEqual(_b, "a")
-        })
-    })
-})
+const f1 = (ab: ImmutableTuple2) => {
+    const [a, b] = ab
+    const _a: number = a
+    const _b: string = b
+}
